@@ -1,0 +1,452 @@
+/*------- Titulos -----*/
+
+@import "textos";
+
+@mixin titulos ($tam) {
+    font-size: $tam;
+    color: $colorParrafoOscuro;
+}
+h2 {
+    @include titulos($tamH2)
+}
+
+/*------- Fondos -----*/
+
+$bondades: (
+    fondo1: #c4c4c4,
+    fondo2: #f2f2f2,
+);
+
+@each $bondad, $color in $bondades {
+    .bon--#{$bondad} {
+        background-color: $color;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* body -------------------------------------------------*/
+body {
+    font: 16px Roboto;
+    background:  #f5f5f5;;
+    margin: 0 0 0 0;
+}
+
+/* enlaces */
+
+a {
+    text-decoration: none;
+    color: #010042;
+}
+
+/* titulos */
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: Poppins;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h4 {
+    font-size: 24px;
+}
+h5 {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.h2Claro {
+    color: #f5f5f5;
+}
+
+/* párrafos */
+
+p {
+    color: #010042;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 16px;
+}
+    
+.estiloParrafoClaro {
+    color: #dddddd;
+}
+
+/* header ----------------------  menu ---------------------*/
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #dddddd;
+    padding: 10px 20px 5px 20px;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+li {
+    display: inline-block;
+    margin-right: 20px;
+    list-style: none;
+}
+
+.navLogo {
+    height: 30px;
+}
+
+/* imágenes */
+
+.galeria {
+    height: 400px;
+    width: 600px;
+}
+
+.logo {
+    height: 462px;
+    width: 462px;
+}
+
+.tam {
+    height: 24px;
+    width: 24px;
+}
+
+
+/* ///////////////////////// index /////////////////////////*/
+
+/* seccion ----------------------  hero -------------------*/
+
+.heroSection {
+    background-image: url("../images/heroBack.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+
+.divHero {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(18, 18, 19, 0.61);
+    height: 80vh;
+    
+}
+
+.heroLogo img {
+    width: 80%;
+}
+
+.heroCall h1, p {
+    color:#f5f5f5;
+}
+    
+    
+/* seccion ----------------------  info  -------------------*/
+
+.infoSection {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.infoSection div {
+    margin-right: 20px;
+    padding:20px;
+    line-height: unset;
+    width: 20%;
+    text-align: center;
+}
+
+.infoSection h2 {
+    color: #f5f5f5;
+}
+
+.infoSection img {
+    width: 20%;
+}
+.infoMetodos {
+    background-color:#f32f47;
+   
+}
+
+.infoEjercicios {
+    background-color:#02c9a8b6;
+
+}
+
+.infoTodos {
+    background-color:#f32f47;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* seccion ----------------------  comienza  -------------------*/
+
+.comienza{
+    padding: 10px;
+}
+
+.nuevo {
+    background-color: #f5f5f5;
+    width: 50%;
+    height: 800px;
+    padding: 10px;
+}
+
+.crossfiter {
+    background-color: #010042;
+    width: 50%;
+    height: 800px;
+    padding: 10px;
+}
+
+
+/* seccion ----------------------  bondades  -------------------*/
+
+.boxBondades {
+    display: flex;
+    flex-flow: row nowrap ;
+    justify-content: space-between;
+    background-color: #e5e2e2;
+}
+
+.boxBondades div {
+    padding:60px;
+    width: 25%;
+    text-align: center;
+    
+}
+
+.boxBondades h4, p {
+    color:#010042 ;
+}
+
+.bondadesClaro {
+    background-color:#dfdbdb ;
+}
+
+.boxBondades img {
+    width: 60px;
+    height: 60x;
+}
+
+.boxBondadesContenedor {
+    padding: 10px;
+}
+.boxBondade {
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+}
+/* seccion ----------------------  comienza  -------------------*/
+.comenzar {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.comenzar div {
+    padding: 50px;
+    height: 60%;
+}
+
+.comenzar h2 {
+    color: #dddddd;
+}
+.comenzar p {
+    color: #dddddd;
+}
+.nuevo {
+    background-color: #f32f47;
+    background-image: url("../images/ejercicos.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.crossfiter {
+    background-color: #19162b;
+    background-image: url("../images/metodos.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* seccion ----------------------  entrenadores  -------------------*/
+.entrenadores {
+    padding: 40px;
+    background-color:#dddddd ;
+}
+.contenedor {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+
+}
+.cardEntrenadores {
+    display: flex;
+    flex-flow: row nowrap ;
+    justify-content: space-between;
+    width: 40%;
+    background-color: #f32f47;
+    border-top-left-radius:40px;
+    border-bottom-right-radius:40px ;
+    overflow: hidden;
+    text-align: left;
+}
+
+.cardEntrenadores img {
+    width: 50%;
+}
+
+.cardEntrenadores div {
+    width: 40%;
+   padding: 40px;
+}
+
+.cardEntrenadores h5 {
+    color: #f5f5f5;
+    text-transform: uppercase;
+    
+}
+
+.cardEntrenadores p {
+    color: #f5f5f5;
+}
+/* ///////////////////////// precios /////////////////////////*/
+
+/* seccion --------------------  precios  -------------------*/
+
+.precios {
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.monto1 {
+    background-color: #dddddd;
+    height: 500px;
+    width: 200px;
+}
+
+.monto2 {
+    background-color: #010042;
+    height: 600px;
+    width: 200px;
+}
+
+/* ///////////////////////// nutricion /////////////////////////*/
+
+/* seccion nutricion*/
+
+.plantillaNutricion {
+    background-image: url("https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1231&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.plantillaContenedor {
+    Padding: 20px;
+    background-color: rgba(220, 220, 231, 0.486);
+}
+.PlantillasAction {
+    width: 70%;
+}
+.plantillaBondades {
+    background-color: #dddddd;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/* ------------------------- botones --------------------------------- */
+
+.callToAction {
+    color: #dddddd;
+    background-color: #010042;
+    font-family: Roboto;
+    border-radius: 50px;
+    border-style: none;
+    padding: 10px;
+    width: 150px;
+    height: 40px;
+}
+
+
+/* footer ----------------------  menu --------------------------------*/
+
+footer {
+    background-color: #19162bd8;
+    background-image: url("../images/todos.jpg");
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contenedorFooter {
+    display: flex;
+    flex-flow: row nowrap ;
+    justify-content: space-around;
+    width: 70%;
+}
+
+.contenedorFooter div {
+    width: 30%;
+    padding: 40px;
+    align-items: center;
+   
+}
+
+.contenedorFooter h5 {
+    color: #f32f47;
+    text-transform: uppercase;
+}
+
+.contenedorFooter p {
+    color: #dddddd;
+}
+
+.contenedorFooter strong {
+    color: #f32f47;
+}
+
+.legal {
+    background-color:#19162b ;
+    margin: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.legal div {
+    width: 80%;
+    color: #dddddd;
+}
+
+.legal p {
+    color: #dddddd;
+}
